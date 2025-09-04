@@ -13,8 +13,9 @@ import dotenv from 'dotenv';
 dotenv.config(); 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: ["http://localhost:3000", "http://localhost:3001", "https://ramanpreett.github.io"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 app.use(express.json());
